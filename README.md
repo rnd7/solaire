@@ -1,6 +1,9 @@
 # Lux & Lucid Solaire
 Video Mixer realized as Electron App. Features 2 + 1 Channels, Blend FXs, Output Masking and Vignette, Color Transform, Adjustable Playback Speed and more. This piece of Software surely can't compete with full fledged VJing Sofware. But therefore it is free.
 
+## Before Download
+The vids in the asset directory are quite heavy (> 50MB)
+
 ## Installation
 You need node and npm installed on your machine. It should work on all platforms electron supports. I only tested in on a linux machine.
 
