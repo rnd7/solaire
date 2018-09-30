@@ -1,0 +1,277 @@
+html, body {
+  margin: 0;
+  padding:0;
+  background-color: #001116;
+  overflow: hidden;
+  color: #FFFFFF;
+  font-size: 9px;
+  font-family: sans-serif;
+}
+
+h2{
+  text-align: center;
+  font-size: 11px;
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+label{
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  font-size: 9px;
+}
+
+input{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 9px;
+}
+
+input, button {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.container .logo {
+  min-width: 64px;
+  max-width: 64px;
+  min-height: 100%;
+  max-height: 100%;
+  background-color: #000210;
+  overflow: hidden;
+  flex: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column;
+}
+
+.spacer {
+  flex: 1;
+}
+
+button.icon {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #FFF;
+  outline: none;
+}
+
+button.icon:focus {
+  outline: none;
+}
+
+
+input[type=text], input[type=number] {
+    background: #001822; /*#000210;*/
+    border: none;
+    color: #FFFFFF;
+    padding: 7px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 1px #000811 inset;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+    border: none;
+    outline: none;
+    background-color: #003036;
+}
+input[type=number] {
+  position: relative;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button  {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    margin: 0;
+    padding: 0;
+    margin-right: -3px;
+    border-radius: 2px;
+
+    background-color: #003238;
+
+    box-shadow: 0px 0px 8px 1px #000811;
+    color: #ffffff;
+    border-radius: 2px;
+     /* opacity: 1;shows Spin Buttons per default (Chrome >= 39) */
+
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    background: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: #001822; /*#000210;*/
+    /*background-image: url(assets/scale.png);*/
+    background-repeat:no-repeat;
+    background-position: center center;
+    padding: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 1px #000811 inset;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 18px;
+    width: 12px;
+    background: #003238;
+    margin-top: 0px;
+    box-shadow: 0px 0px 8px 1px #000811;
+    border-radius: 2px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background-color: #003036;
+}
+
+select {
+  padding: 3px;
+}
+select, select option {
+    border: none;
+    background: #003036;
+    color: #fff;
+}
+select:focus, select option:focus {
+  outline: none;
+}
+
+select > * {
+  border:0px;
+  outline:0px;
+}
+
+.container .logo img {
+  flex: 0;
+}
+
+.container .settings {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+}
+
+.videoPreview {
+  width: 100%;
+  display: flex;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  max-height: 40%;
+  background-color: #000;
+}
+
+.control-container{
+  margin: 6px;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row;
+}
+
+.control{
+  padding: 6px;
+  background-color: #002228;
+  margin-left: 6px;
+  box-sizing: border-box;
+}
+.control-container > .spacer{
+  padding: 6px;
+  background-color: #002228;
+  margin-left: 6px;
+  box-sizing: border-box;
+}
+
+.control:nth-child(1){
+  margin-left: 0px;
+}
+
+.container .settings .rings {
+  flex: 1;
+  display: flex;
+  flex-flow: row;
+  overflow: hidden;
+}
+.container .settings .rings .ring{
+  background-color: #002228;
+  flex: 1;
+  padding: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+}
+.container .settings .rings .ring:nth-child(1){
+  margin-left: 6px;
+  margin-right: 3px;
+}
+.container .settings .rings .ring:nth-child(2){
+  margin-left: 3px;
+  margin-right: 6px;
+}
+
+.colorMixer {
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+}
+
+.colorMixerComponent {
+  display: flex;
+  flex-flow: column;
+  flex:1;
+  margin-left: 6px;
+
+}
+.colorMixerComponent:nth-child(1){
+  margin-left: 0px;
+}
+
+.container .settings .mixer {
+  margin: 6px 6px 0px 6px;
+  padding: 6px;
+  background-color: #002228;
+  flex: 0;
+}
+.container .settings .overlay {
+  margin: 0px 6px 6px 6px;
+  padding: 6px;
+  background-color: #002228;
+  flex: 0;
+}
+.container .settings .master {
+  margin: 0px 6px 0px 6px;
+  padding: 6px;
+  background-color: #002228;
+  flex: 0;
+}
+
+.crossfader-label {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+#mixerView, #mask {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

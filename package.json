@@ -1,0 +1,24 @@
+{
+  "name": "solaire",
+  "version": "1.0.0",
+  "description": "Lux & Lucid Video Mixer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ./src/main.js"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "Video",
+    "Mixer"
+  ],
+  "author": "rnd7",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "electron": "^1.8.1"
+  },
+  "dependencies": {
+    "three": "^0.84.0",
+    "three-effectcomposer": "0.0.1"
+  }
+}

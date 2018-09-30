@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Controls - L&amp;L Solaire</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="settings">
+        <div class="control-container">
+          <div class="control">
+              <img src="assets/iris-logo.png">
+          </div>
+          <div class="control">
+            <label>Controls</label>
+            <button id="play" class="icon" title="play">&#9654;</button>
+            <button id="pause" class="icon" title="pause">&#9646;&#9646;</button>
+            <button id="fullscreen" class="icon" title="fullscreen">&#128470;</button>
+            <button id="leaveFullscreen" class="icon" title="window">&#128471;</button>
+            <label>Views</label>
+            <button id="toggleMixerView" class="icon" title="mixer">MIX</button>
+            <button id="toggleMaskView" class="icon" title="mask">MASK</button>
+          </div>
+          <div class="control">
+            <label>Nth Frame</label>
+            <input id="nthFrame" type="number" min="1" max="6">
+          </div>
+          <div class="control">
+              <label>Zoom</label>
+              <input id="scale" type="range" min="0.1" max="3" step="0.01">
+          </div>
+          <div class="control">
+              <label>Offset x</label>
+              <input id="xOffset" type="range" min="-1" max="1" step="0.01">
+              <label>Offset y</label>
+              <input id="yOffset" type="range" min="-1" max="1" step="0.01">
+          </div>
+          <div class="control">
+              <label>Scale x</label>
+              <input id="scaleX" class="centerScale"  type="range" min="0" max="3" step="0.01">
+              <label>Scale y</label>
+              <input id="scaleY" class="centerScale" type="range" min="0" max="3" step="0.01">
+          </div>
+          <div class="control">
+            <label>Persistence</label>
+            <button id="loadModel" class="icon" title="load">LOAD</button>
+            <button id="saveModel" class="icon" title="save">SAVE</button>
+          </div>
+          <div class="spacer">
+          </div>
+        </div>
+        <div id="mixerView">
+          <div class="rings">
+            <div class="ring">
+              <h2>Video A</h2>
+              <label>Video</label>
+              <input id="channelRingAVideo" data-dropzone="true" type="text">
+              <video id="videoAPreview" data-dropzone="true" class="videoPreview" src=""></video>
+              <label>Playback Speed</label>
+              <input id="channelRingAPlaybackSpeed" type="range" min="0" max="10" step="0.01">
+              <div class="colorMixer">
+                <div class="colorMixerComponent">
+                  <label>Red</label>
+                  <input id="channelRingARed" type="range" min="-1" max="1" step="0.01">
+                </div>
+                <div class="colorMixerComponent">
+                  <label>Green</label>
+                  <input id="channelRingAGreen" type="range" min="-1" max="1" step="0.01">
+                </div>
+                <div class="colorMixerComponent">
+                  <label>Blue</label>
+                  <input id="channelRingABlue" type="range" min="-1" max="1" step="0.01">
+                </div>
+              </div>
+              <div class="spacer">
+              </div>
+            </div>
+            <div class="ring">
+              <h2>Effect</h2>
+              <label>Video</label>
+              <input id="effectChannelVideo" data-dropzone="true" type="text">
+              <video id="effectChannelPreview" data-dropzone="true" class="videoPreview" src=""></video>
+              <label>Playback Speed</label>
+              <input id="effectChannelPlaybackSpeed" type="range" min="0" max="10" step="0.01">
+              <div class="colorMixer">
+                <div class="colorMixerComponent">
+                  <label>Red</label>
+                  <input id="effectChannelRed" type="range" min="-1" max="1" step="0.01">
+                </div>
+                <div class="colorMixerComponent">
+                  <label>Green</label>
+                  <input id="effectChannelGreen" type="range" min="-1" max="1" step="0.01">
+                </div>
+                <div class="colorMixerComponent">
+                  <label>Blue</label>
+                  <input id="effectChannelBlue" type="range" min="-1" max="1" step="0.01">
+                </div>
+              </div>
+              <label>Blend Mode</label>
+              <select id="effectBlendMode" name="effectBlendMode">
+                <option value="0" selected="selected">MIX</option>
+                <option value="1">ADD</option>
+                <option value="2">SUBTRACT</option>
+                <option value="3">MULTIPLY</option>
+                <option value="4">DIVIDE</option>
+                <option value="5">LIGHTER</option>
+                <option value="6">DARKER</option>
+                <option value="7">HUE</option>
+                <option value="8">VALUE AS SATURATION</option>
+                <option value="9">DIVIDE VALUE</option>
+              </select>
+              <label>Amount</label>
+              <input id="effectChannelMix" type="range" min="0" max="1" step="0.01">
+              <div class="spacer">
+              </div>
+            </div>
+            <div class="ring">
+              <h2>Video B</h2>
+              <label>Video</label>
+              <input id="channelRingBVideo" data-dropzone="true" type="text">
+              <video id="videoBPreview" data-dropzone="true" class="videoPreview" src=""></video>
+              <label>Playback Speed</label>
+              <input id="channelRingBPlaybackSpeed" type="range" min="0" max="10" step="0.01">
+              <div class="colorMixer">
+                <div class="colorMixerComponent">
+                  <label>Red</label>
+                  <input id="channelRingBRed" type="range" min="-1" max="1" step="0.01">
+                </div>
+                <div class="colorMixerComponent">
+                  <label>Green</label>
+                  <input id="channelRingBGreen" type="range" min="-1" max="1" step="0.01">
+                </div>
+                <div class="colorMixerComponent">
+                  <label>Blue</label>
+                  <input id="channelRingBBlue" type="range" min="-1" max="1" step="0.01">
+                </div>
+              </div>
+              <div class="spacer">
+              </div>
+            </div>
+          </div>
+          <div class="mixer">
+            <div class="crossfader-label"><span>Video A</span><span class="spacer"></span><span>Video B</span></div>
+            <input id="channelMixAmount" type="range" min="0" max="1" step="0.001">
+            <div class="crossfader-label">
+              <span>
+                <button id="fadeAFast" class="icon" title="fast">&#10096;</button>
+                <button id="fadeASlow" class="icon" title="fast">&#10094;</button>
+                <button id="fadeASlower" class="icon" title="fast">&#10092;</button>
+              </span>
+              <span class="spacer"></span>
+              <span>
+                <button id="fadeBSlower" class="icon" title="fast">&#10093;</button>
+                <button id="fadeBSlow" class="icon" title="fast">&#10095;</button>
+                <button id="fadeBFast" class="icon" title="fast">&#10097;</button>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div class="control-container">
+              <div class="control">
+                <div class="master-label">Master</div>
+                <input class="crossfader" id="master" type="range" min="0" max="1" step="0.01">
+                <div class="saturation-label">Saturation</div>
+                <input class="crossfader" id="saturation" type="range" min="0" max="1" step="0.01">
+              </div>
+              <div class="control">
+                <div class="vignette-label">Vignette Size</div>
+                <input class="crossfader" id="vignetteSize" type="range" min="0" max="2" step="0.01">
+                <div class="vignette-label">Vignette Smooth</div>
+                <input class="crossfader" id="vignetteSmooth" type="range" min="0" max="1" step="0.01">
+              </div>
+              <div class="spacer">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="maskView">
+          <div class="settings">
+            <div class="control-container">
+              <div class="control">
+                <label>Shapes</label>
+                <button id="addShape" class="icon" title="play">ADD</button>
+                <label>Selected</label>
+                <input id="selectedShape" type="number">
+                <button id="removeSelectedShape" class="icon" title="removeSelectedShape">REMOVE</button>
+              </div>
+              <div class="control">
+                <label>Points</label>
+                <button id="addPoint" class="icon" title="play">ADD</button>
+                <label>Selected</label>
+                <input id="selectedPoint" type="number">
+                <button id="removeSelectedPoint" class="icon" title="removeSelectedPoint">REMOVE</button>
+              </div>
+              <div class="control">
+                <label>Point x</label>
+                <input class="crossfader" id="selectedPointX" type="range" min="-1" max="1" step="0.01">
+                <label>Point y</label>
+                <input class="crossfader" id="selectedPointY" type="range" min="-1" max="1" step="0.01">
+              </div>
+              <div class="control">
+                <label>Precision</label>
+                <button id="selectedPointUp" class="icon" title="play">UP</button>
+                <button id="selectedPointDown" class="icon" title="play">DOWN</button>
+                <button id="selectedPointLeft" class="icon" title="play">LEFT</button>
+                <button id="selectedPointRight" class="icon" title="play">RIGHT</button>
+              </div>
+              <div class="spacer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var renderer = require('./renderer.js')
+    renderer.init()
+  </script>
+</html>
